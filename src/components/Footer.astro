@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import { HOME } from "src/config";
 // component from flowbite
 ---
 
@@ -27,12 +28,11 @@ import { Icon } from "astro-icon";
       <div>
         <h2 class="mb-6 text-sm text-zinc-900 uppercase dark:text-white">Follow me</h2>
         <ul class="text-zinc-800 dark:text-zinc-300">
-          <li class="mb-4">
-            <a href="https://github.com/lancerossdev" class="hover:underline" target="_blank">GitHub</a>
-          </li>
-          <li>
-            <a href="https://twitter.com/lancerossdev" class="hover:underline" target="_blank">Twitter</a>
-          </li>
+          {Object.keys(HOME.LINKS).map(key=>
+            <li class="mb-4">
+              <a href={HOME.LINKS[key].href} class="hover:underline" target="_blank">{HOME.LINKS[key].content}</a>
+            </li>
+          )}
         </ul>
       </div>
     </div>

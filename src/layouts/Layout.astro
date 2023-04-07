@@ -2,6 +2,7 @@
 import Header from "@components/Header.astro";
 import ThemeToggle from "@components/ThemeToggle.astro";
 import "@fontsource/inter/variable.css";
+import { BASE } from "src/config";
 
 export interface Props {
   title?: string;
@@ -11,8 +12,8 @@ export interface Props {
 }
 
 const defaultMeta = {
-  title: "NoFuss Astro",
-  description: "No fuss Astro Template for Landing, Blog and Docs page. No complicated design and setup, just start editing.",
+  title: BASE.title,
+  description: BASE.desc,
   image: "/banner.png",
   imageAlt: "Mountain Logo with NoFuss",
 };
