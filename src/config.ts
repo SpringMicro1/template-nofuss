@@ -5,7 +5,8 @@ export const BASE = {
   "desc": "An Astro Template for blog, docs or landing page without complicated design and setup.",  
   "title": "NoFuss Astro",  
   "ogImage": "astropaper-og.jpg", 
-  "lightAndDarkMode": true
+  "lightAndDarkMode": true,
+  "logoSrc": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/mountain-sun.svg"
 };
 export const HOME = {
   "TEXT":{
@@ -34,7 +35,20 @@ export const HOME = {
       "content": "Twitter"
     }
   },
-  "IMAGES":{}
+  "IMAGES":{
+    "Feature 1": {
+      "src": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/meteor.svg",
+      "alt": "Feature 1"
+    },
+    "Feature 2": {
+      "src": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/code.svg",
+      "alt": "Feature 2"
+    },
+    "Feature 3": {
+      "src": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/leaf.svg",
+      "alt": "Feature 3"
+    }
+  }
 };
 export const BLOG = {
   "TEXT":{

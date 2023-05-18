@@ -27,13 +27,13 @@ const counter = [
     <h1 class="sm:text-4xl text-3xl font-bold mb-6 dark:text-white">{HOME.TEXT.Heading}</h1>
     <p>{HOME.TEXT.Description}</p>
   </section>
-  {homepage.map((homepage) => <Features title={homepage.title} icon={homepage.icon} content={homepage.content} />)}
+  {homepage.map((homepage) => <Features title={homepage.title} image={homepage.image} content={homepage.content} />)}
   <section class="py-20 sm:flex sm:items-center sm:justify-evenly text-center sm:text-left">
     {
       (
         <ul class="grid sm:grid-cols-3 gap-16">
           {counter.map((counter) => (
-            <Counter number={counter.number} label={counter.label} />
+            <Counter number={parseFloat(counter.number)} label={counter.label} />
           ))}
         </ul>
       )
