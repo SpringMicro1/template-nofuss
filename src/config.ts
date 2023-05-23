@@ -2,59 +2,61 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const BASE = {
-  "desc": "An Astro Template for blog, docs or landing page without complicated design and setup.",  
-  "title": "NoFuss Astro",  
-  "ogImage": "astropaper-og.jpg", 
-  "lightAndDarkMode": true,
-  "logoSrc": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/mountain-sun.svg"
+  DESC: "An Astro Template for blog, docs or landing page without complicated design and setup.",  
+  TITLE: "NoFuss Astro",  
+  OG_IMAGE: "astropaper-og.jpg", 
+  LIGHT_AND_DARK_MODE: true,
+  LOGO_SRC: "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/mountain-sun.svg",
+  FOOTER_MESSAGE_TITLE: "NoFuss",
+  FOOTER_MESSAGE_TEXT: "A simple, no fuss, Astro template."
 };
 export const HOME = {
-  "TEXT":{
-    "Heading":"No Fuss Astro Template",
-    "Description":"An Astro Template for blog, docs or landing page without complicated design and setup.",
-    "Feature 1 Title":"Blazingly Fast",
-    "Feature 1 Text":"The reason why I chose Astro is because it's blazingly fast. It's also a component-based framework, so you can easily reuse your components.",
-    "Feature 2 Title":"Easy to use",
-    "Feature 2 Text":"Need to use this template? Just clone it and start writing your content. No complicated setup, no complicated design.",
-    "Feature 3 Title":"Free and Open Source",
-    "Feature 3 Text":"Found some issues or want to contribute? Feel free to open an issue or pull request on GitHub.",
-    "Data 1 Number":"1632",
-    "Data 1 Text":"This is a fake data",
-    "Data 2 Number":"4564",
-    "Data 2 Text":"Stars on GitHub",
-    "Data 3 Number":"1712",
-    "Data 3 Text":"Contributors"
+  TEXT:{
+    HEADING:"No Fuss Astro Template",
+    DESCRIPTION:"An Astro Template for blog, docs or landing page without complicated design and setup.",
+    FEATURE_1_TITLE:"Blazingly Fast",
+    FEATURE_1_TEXT:"The reason why I chose Astro is because it's blazingly fast. It's also a component-based framework, so you can easily reuse your components.",
+    FEATURE_2_TITLE:"Easy to use",
+    FEATURE_2_TEXT:"Need to use this template? Just clone it and start writing your content. No complicated setup, no complicated design.",
+    FEATURE_3_TITLE:"Free and Open Source",
+    FEATURE_3_TEXT:"Found some issues or want to contribute? Feel free to open an issue or pull request on GitHub.",
+    DATA_1_NUMBER:"1632",
+    DATA_1_TEXT:"This is a fake data",
+    DATA_2_NUMBER:"4564",
+    DATA_2_TEXT:"Stars on GitHub",
+    DATA_3_NUMBER:"1712",
+    DATA_3_TEXT:"Contributors"
   },
-  "LINKS":{ 
-    "Link Github": { 
-      "href":   "https://github.com/lancerossdev", 
-      "content": "GitHub"
+  LINKS:{ 
+    LINK_GITHUB: { 
+      href:   "https://github.com/lancerossdev", 
+      content: "GitHub"
     }, 
-    "Link Twitter": { 
-      "href": "https://twitter.com/lancerossdev", 
-      "content": "Twitter"
+    LINK_TWITTER: { 
+      href: "https://twitter.com/lancerossdev", 
+      content: "Twitter"
     }
   },
-  "IMAGES":{
-    "Feature 1": {
-      "src": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/meteor.svg",
-      "alt": "Feature 1"
+  IMAGES:{
+    FEATURE_1: {
+      src: "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/meteor.svg",
+      alt: "Feature 1"
     },
-    "Feature 2": {
-      "src": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/code.svg",
-      "alt": "Feature 2"
+    FEATURE_2: {
+      src: "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/code.svg",
+      alt: "Feature 2"
     },
-    "Feature 3": {
-      "src": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/leaf.svg",
-      "alt": "Feature 3"
+    FEATURE_3: {
+      src: "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/leaf.svg",
+      alt: "Feature 3"
     }
   }
 };
 export const BLOG = {
-  "TEXT":{
-    "Heading":"Blog",
-    "Description":"This is how the blog page looks like. Just add an MDX file to the blog folder and it will show up here."
+  TEXT:{
+    HEADING:"Blog",
+    DESCRIPTION:"This is how the blog page looks like. Just add an MDX file to the blog folder and it will show up here."
   },
-  "LINKS":{},
-  "IMAGES":{}
+  LINKS:{},
+  IMAGES:{}
 };

@@ -8,24 +8,24 @@ import { HOME } from "src/config";
 
 const counter = [
   {
-    number: HOME.TEXT["Data 1 Number"],
-    label: HOME.TEXT["Data 1 Text"],
+    number: HOME.TEXT.DATA_1_NUMBER,
+    label: HOME.TEXT.DATA_1_TEXT,
   },
   {
-    number: HOME.TEXT["Data 2 Number"],
-    label: HOME.TEXT["Data 2 Text"],
+    number: HOME.TEXT.DATA_2_NUMBER,
+    label: HOME.TEXT.DATA_2_TEXT,
   },
   {
-    number: HOME.TEXT["Data 3 Number"],
-    label: HOME.TEXT["Data 3 Text"],
+    number: HOME.TEXT.DATA_3_NUMBER,
+    label: HOME.TEXT.DATA_3_TEXT,
   },
 ]
 ---
 
 <Layout>
   <section class="grid py-10 place-items-center text-center">
-    <h1 class="sm:text-4xl text-3xl font-bold mb-6 dark:text-white">{HOME.TEXT.Heading}</h1>
-    <p>{HOME.TEXT.Description}</p>
+    <h1 class="sm:text-4xl text-3xl font-bold mb-6 dark:text-white">{HOME.TEXT.HEADING}</h1>
+    <p>{HOME.TEXT.DESCRIPTION}</p>
   </section>
   {homepage.map((homepage) => <Features title={homepage.title} image={homepage.image} content={homepage.content} />)}
   <section class="py-20 sm:flex sm:items-center sm:justify-evenly text-center sm:text-left">

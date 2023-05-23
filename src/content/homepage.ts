@@ -1,18 +1,18 @@
 import { HOME } from "src/config";
 export const homepage = [
   {
-    title: HOME.TEXT["Feature 1 Title"],
-    content: HOME.TEXT["Feature 1 Text"],
-    image: HOME.IMAGES["Feature 1"],
+    title: HOME.TEXT.FEATURE_1_TITLE,
+    content: HOME.TEXT.FEATURE_1_TEXT,
+    image: HOME.IMAGES.FEATURE_1,
   },
   {
-    title: HOME.TEXT["Feature 2 Title"],
-    content: HOME.TEXT["Feature 2 Text"],
-    image: HOME.IMAGES["Feature 2"],
+    title: HOME.TEXT.FEATURE_2_TITLE,
+    content: HOME.TEXT.FEATURE_2_TEXT,
+    image: HOME.IMAGES.FEATURE_2,
   },
   {
-    title: HOME.TEXT["Feature 3 Title"],
-    content: HOME.TEXT["Feature 3 Text"],
-    image: HOME.IMAGES["Feature 3"],
+    title: HOME.TEXT.FEATURE_3_TITLE,
+    content: HOME.TEXT.FEATURE_3_TEXT,
+    image: HOME.IMAGES.FEATURE_3,
   },
 ];
