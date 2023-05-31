@@ -4,6 +4,7 @@
 export const BASE = {
   DESC: "An Astro Template for blog, docs or landing page without complicated design and setup.",  
   TITLE: "NoFuss Astro",  
+  COMPANY_NAME: "NoFuss Astro",
   OG_IMAGE: "astropaper-og.jpg", 
   LIGHT_AND_DARK_MODE: true,
   LOGO_SRC: "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/0698449d50f2b95517562295a59d414afc68b369/svgs/solid/mountain-sun.svg",
@@ -59,4 +60,23 @@ export const BLOG = {
   },
   LINKS:{},
   IMAGES:{}
+};
+export const CONTACT = {
+  TEXT: {
+    DESCRIPTION: "Get in touch.",
+    PARAGRAPH:
+      "Have something to say? We are here to help. Fill out the form, send an email, or call us on the phone.",
+    ADDRESS: "123 Example Street; My Place, NY 00000",
+  },
+  LINKS: {
+    EMAIL: {
+      href: "me@example.com",
+      content: "me@example.com",
+    },
+    PHONE: {
+      href: "+12015555555",
+      content: "+1 (201) 555-5555",
+    },
+  },
+  IMAGES: {},
 };

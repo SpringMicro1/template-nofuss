@@ -1,0 +1,66 @@
+---
+import Button from "./ui/button.astro";
+let form = {} as any
+if (!import.meta.env.PUBLIC_IN_CONTAINER) {
+  const res = await fetch(`${import.meta.env.PUBLIC_FORMS_API_URL}/v1/forms/${import.meta.env.PUBLIC_CONTACT_FORM_ID}`, {
+    headers: {
+      "x-api-key": import.meta.env.PUBLIC_API_KEY!
+    }
+  })
+  form = await res.json()
+} else if (import.meta.env.PUBLIC_CONTACT_FORM_JSON) {
+  form = JSON.parse(import.meta.env.PUBLIC_CONTACT_FORM_JSON)
+}
+// form = {fieldsets: [{legend_text: "Field 1", inputs: [{name: "Input 1", label_text: "Input 1", input_type: "text", required: true}]}]}
+---
+
+<form
+  action={import.meta.env.PUBLIC_IN_CONTAINER ? "/contact/?success=true" : `${import.meta.env.PUBLIC_FORMS_API_URL}/v1/forms/contact/${import.meta.env.PUBLIC_CONTACT_FORM_ID}/submit?callback-url=${import.meta.env.PUBLIC_URL}/contact`}
+  method="POST"
+>
+  <div id="result" class="hidden mb-3 px-6 py-3 text-green-700 border-green-700 bg-green-100 border-2 rounded text-center"></div>
+  {form.fieldsets.map((f:any) => <fieldset>
+    <legend class="sr-only">{f.legend_text}</legend>  
+    {f.inputs.map((i:any) => <div class="mb-5">
+      <label class="sr-only" for={"field-"+i.name}>{i.label_text}</label>
+      <input
+        type={i.input_type}
+        aria-label={i.label_text}
+        placeholder={i.label_text}
+        required={i.required}
+        class={`w-full px-4 py-3 border-2 placeholder:text-gray-800 disabled:placeholder:text-gray-400 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 ${i.hidden ? "hidden" : ""}`}
+        name={i.name}
+        id={"field-"+i.name}
+        value={i.initial_value}
+      />
+      <div id={`error-${i.name}`} class="hidden text-red-400 text-sm mt-1"></div>
+    </div>)}
+  </fieldset>)}
+  <Button type="submit" size="lg" block class="disabled:text-gray-400 ">Send Message</Button>
+</form>
+
+<script is:inline>
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+  console.log('params', params);
+  if (params["data"]) {
+    const data = JSON.parse(atob(params["data"]))
+    Object.entries(data).forEach(([k,v]) => {
+      const el = document.querySelector(`input[name="${k}"]`)
+      if (v.value) {
+        el.value = v.value;
+      }
+      if (v.errors.length > 0) {
+        const err = document.querySelector(`#error-${k}`)
+        err.classList.remove("hidden")
+        err.innerHTML = v.errors.join("<br>")
+      }
+    })
+  }
+  if (params["success"] == "true") {
+    document.querySelectorAll("input, button").forEach(el => el.disabled = true)
+    const result = document.querySelector(`#result`)
+    result.classList.remove("hidden")
+    result.innerHTML = "Message received!"
+  }
+</script>

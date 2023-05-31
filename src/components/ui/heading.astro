@@ -1,0 +1,37 @@
+---
+interface Props {
+  component: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl";
+  class?: string;
+  [x: string]: any;
+}
+
+const {
+  component,
+  size,
+  class: className,
+  ...rest
+} = Astro.props;
+
+const sizes = {
+  h1: "text-4xl lg:text-5xl",
+  h2: "text-3xl lg:text-4xl",
+  h3: "text-2xl lg:text-3xl",
+  h4: "text-xl lg:text-2xl",
+  h5: "text-lg lg:text-xl",
+  h6: "text-base lg:text-lg",
+};
+
+const classList = [
+  "font-heading",
+  size ? `text-${size}` : sizes[component],
+  className,
+]
+---
+
+{component === "h1" && <h1 {...rest} class:list={classList}><slot /></h1>}
+{component === "h2" && <h2 {...rest} class:list={classList}><slot /></h2>}
+{component === "h3" && <h3 {...rest} class:list={classList}><slot /></h3>}
+{component === "h4" && <h4 {...rest} class:list={classList}><slot /></h4>}
+{component === "h5" && <h5 {...rest} class:list={classList}><slot /></h5>}
+{component === "h6" && <h6 {...rest} class:list={classList}><slot /></h6>}
